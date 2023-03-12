@@ -9,22 +9,58 @@ li {
 }
 a {
     text-decoration: none;
+    color: #000;
 }
 header {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
-    height: 70px;
+    padding: 10px 30px;
+    height: 70px; /*chiều cao */
+    align-items: center; /*Căn giữa*/
+    background-color: #019ff4;
+    position: relative;
 }
 .logo {
     flex: 1;
 }
+.logo > img {
+    width: 100px;
+    position: absolute;
+    top: 2px;
+}
 .menu {
-    flex: 3;
+    flex: 5;
     display: flex;
 }
 .menu > li {
     padding: 0 12px;
+    position: relative;
+}
+.menu > li:hover .sub-menu{
+    visibility: visible;
+    top: 25px;
+}
+.sub-menu {
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 5px 0 10px 20px;
+    top: 40px;
+    background-color: #b5edff;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.sub-menu > li ul{
+    padding-left: 20px;
+}
+.sub-menu > li ul a {
+    font-size: 12px;
+}
+.menu > li a {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
 }
 .order {
     flex: 2;
@@ -33,6 +69,26 @@ header {
 .order > li {
     padding: 0 10px;
 }
+.order > li:first-child {
+    position: relative;
+}
+.order > li:first-child input {
+    width: 100px;
+    height: 20px;
+    border: none; /*xóa viền*/
+    border-bottom: 2px  solid #333;
+}
+.order > li:first-child i {
+    position: absolute;
+    right: 12px;
+}
+
+
+
+
+
+
+
 
 
 
